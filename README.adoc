@@ -1,0 +1,6 @@
+= toster
+:hardbreaks-option:
+:source-highlighter: highlightjs
+:source-language: shell
+
+toster (aka time coster) – is a simple tool to record hours worked and calculate final cost 
