@@ -3,4 +3,19 @@
 :source-highlighter: highlightjs
 :source-language: shell
 
-toster (aka time coster) – is a simple tool to record hours worked and calculate final cost 
+toster (aka time coster) – simple way to record hours worked and calculate final cost
+
+🏀 works with GitHub Actions
+🦍 installation/deployment is not required
+👹 git versioning is part of logic
+
+== how to
+. use current template and create a new private repo
+. adapt `data.cue` for your needs – replace names and add new ones
+. (optional) change defaults in policy.cue (default values started with `*`)
+. commit changes with commit message like `add 1h30m`
+. look up GitHub Actions, view the `FINAL COST` step output to get your results
+
+== thanks
+* https://github.com/cue-lang/cue[cue]
+* https://github.com/jqlang/jq[jq]

@@ -1,0 +1,23 @@
+---
+name: ci
+on:
+  push:
+    branches:
+      - "**"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: setup cue
+        uses: cue-lang/setup-cue@v1.0.1
+      - name: install jq
+        uses: dcarbone/install-jq-action@v2
+      - name: FINAL COST
+        run: |
+          echo
+          cue eval --out json | jq -r 'to_entries | map(select(.key != "params" and .value.cost and .value.pricePerHour) | "\(.key): \(.value.currency)\(.value.cost)") | .[]'
