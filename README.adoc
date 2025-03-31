@@ -3,9 +3,9 @@
 :source-highlighter: highlightjs
 :source-language: shell
 
-toster (aka time coster) – simple way to record hours worked and calculate final cost
+this is toster, aka time coster, a simple way to record hours worked and calculate final cost
 
-🏀 works with GitHub Actions
+⚽ works using GitHub Actions
 🦍 installation/deployment is not required
 👹 git versioning is part of logic
 
