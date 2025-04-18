@@ -1,7 +1,7 @@
 package toster
 
 PeterWon: params & {
-	pricePerHour: 5700
+	pricePerHour: 6000
   _timeSlots: {
       meeting1: {
           start: "00:15"
@@ -9,7 +9,7 @@ PeterWon: params & {
       }
       meeting2: {
           start: "00:50"
-          end:   "01:55"
+          end:   "01:45"
       }
   }
 }

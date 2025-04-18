@@ -2,8 +2,8 @@ package toster
 
 import (
 	"strings"
-	"time"
 	"list"
+	"strconv"
 )
 
 _timeFormat: "15:04"
@@ -19,15 +19,25 @@ params: {
 		}
 	}
 
-	slots?: [...{
-		start: time.Time
-		end:   time.Time & >start
-		durationMinutes: int & >0
-	}] | *[
-		for name, meeting in _timeSlots {
-			start: time.Parse(_timeFormat, meeting.start)
-			end:   time.Parse(_timeFormat, meeting.end)
-			durationMinutes: int(time.Sub(end, start) / 60_000_000_000)
+	slots: [
+		if _timeSlots != _|_ for name, meeting in _timeSlots {
+			start: meeting.start
+			end:   meeting.end
+
+			// Parse start time
+			_startParts: strings.Split(start, ":")
+			_startHour:  strconv.Atoi(_startParts[0])
+			_startMin:   strconv.Atoi(_startParts[1])
+			_startTotalMin: _startHour * 60 + _startMin
+
+			// Parse end time
+			_endParts: strings.Split(end, ":")
+			_endHour:  strconv.Atoi(_endParts[0])
+			_endMin:   strconv.Atoi(_endParts[1])
+			_endTotalMin: _endHour * 60 + _endMin
+
+			// Calculate duration in minutes
+			durationMinutes: _endTotalMin - _startTotalMin
 		}
 	]
 
