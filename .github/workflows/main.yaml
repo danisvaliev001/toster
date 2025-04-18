@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: setup cue
+      - name: Setup CUE
         uses: cue-lang/setup-cue@v1.0.1
-      - name: install jq
+      - name: Install jq
         uses: dcarbone/install-jq-action@v2
-      - name: FINAL COST
+      - name: 👹 FINAL COSTS 👹
         run: |
           echo
-          cue eval --out json | jq -r 'to_entries | map(select(.key != "params" and .value.cost and .value.pricePerHour) | "\(.key): \(.value.currency)\(.value.cost)") | .[]'
+          cue eval --out json | jq -r 'to_entries | map(select(.key != "schema" and .value.finalCost and .value.pricePerHour) | "\(.key): \(.value.currency)\(.value.finalCost)") | .[]'

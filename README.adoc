@@ -3,18 +3,18 @@
 :source-highlighter: highlightjs
 :source-language: shell
 
-this is toster, aka time coster, an easy github-based way to record hours worked and calculate final costs
+this is toster, aka time coster, github-based way to record hours worked and calculate final costs 👹
 
-⚽ works using GitHub Actions
+⚽ works on GitHub Actions
+🤸🏻‍♂️ based on CUE
 🦍 installation/deployment is not required
 👹 git versioning is part of logic
 
 == quick start
 . use current template and create a new private repo
-. adapt `data.cue` for your needs – replace names and add new ones
-. (optional) change defaults in policy.cue (default values started with `*`)
+. adapt `data.cue` for your needs – replace names and add new ones, change defaults
 . commit changes with commit message like `add 1h30m to PeterWon`
-. look up GitHub Actions, view the `FINAL COST` step output to get your results
+. look up GitHub Actions Run, find a step with `👹` in the name, and look at the output to get your results
 . rename `README.adoc` (current file) to `README.adoc.bckp` to simplify UX
 
 == thanks
