@@ -13,3 +13,18 @@ PeterWon: params & {
       }
   }
 }
+
+OlgaVlasova: params & {
+	pricePerHour: 57
+	currency: "$"
+  _timeSlots: {
+      meeting1: {
+          start: "16:15"
+          end:   "16:45"
+      }
+      meeting2: {
+          start: "16:55"
+          end:   "17:55"
+      }
+  }
+}

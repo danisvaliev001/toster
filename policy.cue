@@ -4,6 +4,7 @@ import (
 	"strings"
 	"list"
 	"strconv"
+	"text/template"
 )
 
 _timeFormat: "15:04"
@@ -41,9 +42,18 @@ params: {
 		}
 	]
 
-	// Calculate total minutes and hours
-	_totalMinutes: list.Sum([for s in slots {s.durationMinutes}])
-	totalHours: _totalMinutes / 60.0
+	// Calculate total minutes
+	totalMinutes: list.Sum([for s in slots {s.durationMinutes}])
 
-	cost: pricePerHour * totalHours
+	// Calculate cost
+	_costValue: (pricePerHour * totalMinutes) / 60
+
+	// Numerical cost value
+	cost: _costValue
+
+	// Human-readable formatted output
+	output: template.Execute("Cost: {{.Cost}} {{.Currency}}", {
+		Cost:     _costValue
+		Currency: currency
+	})
 }
