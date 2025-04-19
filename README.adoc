@@ -5,7 +5,7 @@
 
 this is toster, aka time coster, an easy way to record hours worked and calculate final costs
 
-🤝 based on CUE
+🥷🏻 based on CUE
 ⚽ works using GitHub Actions
 🦍 installation/deployment is not required
 👹 git versioning is part of logic
