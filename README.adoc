@@ -3,7 +3,9 @@
 :source-highlighter: highlightjs
 :source-language: shell
 
-this is toster, aka time coster, github-based way to record hours worked and calculate final costs 👹
+this is toster,
+aka time coster,
+github-based way to record hours worked and calculate final costs 👹
 
 ⚽ works on GitHub Actions
 🤸🏻‍♂️ based on CUE
