@@ -9,8 +9,8 @@ PeterWon: schema & {
 	}]
 }
 OlgaVlasova: schema & {
-	pricePerHour: 45
-	currency:     "$"
+	pricePerHour: 50
+	currency:     "€"
 	slots: [{
 			startTime:       "13:05"
 			durationMinutes: 30

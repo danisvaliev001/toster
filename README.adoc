@@ -15,7 +15,7 @@ github-based way to record hours worked and calculate final costs 👹
 == quick start
 . use current template and create a new private repo
 . adapt `data.cue` for your needs – replace names and add new ones, change defaults
-. commit changes with commit message like `add 1h30m to PeterWon`
+. commit changes with commit message like `added 1h30m with PeterWon`
 . look up GitHub Actions Run, find a step with `👹` in the name, and look at the output to get your results
 . rename `README.adoc` (current file) to `README.adoc.bckp` to simplify UX
 
